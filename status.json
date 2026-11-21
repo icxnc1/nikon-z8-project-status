@@ -16,7 +16,7 @@
   },
   "independent_checks": {
     "python_evidence_gate": "PASS",
-    "rust_25_synthetic_image_checks": "PASS_25_OF_31__NEW_6_PENDING_RECHECK",
+    "rust_synthetic_image_checks": "PASS_31_OF_31",
     "hardware_equivalence": "BLOCKED"
   },
   "functional_evidence": {
