@@ -16,8 +16,38 @@
   },
   "independent_checks": {
     "python_evidence_gate": "PASS",
-    "rust_25_synthetic_image_checks": "PASS",
+    "rust_25_synthetic_image_checks": "PASS_25_OF_31__NEW_6_PENDING_RECHECK",
     "hardware_equivalence": "BLOCKED"
+  },
+  "functional_evidence": {
+    "schema": "Z8-PUBLIC-FUNCTIONAL-EVIDENCE-v1",
+    "classification": "LOCAL_DETERMINISTIC_QEMU_ONLY",
+    "stock_capture": {
+      "C311": {
+        "stock_firmware": true,
+        "capture_qemu_checks_passed": 3926,
+        "observed_hook_sites": 11,
+        "hook_sites_examined": 24,
+        "nef_directory_entry_observed": true,
+        "nef_bytes_on_virtual_card": 35110512,
+        "nef_content_decoded_or_verified": false
+      },
+      "C312": {
+        "stock_firmware": true,
+        "capture_qemu_checks_passed": 3901,
+        "observed_hook_sites": 11,
+        "hook_sites_examined": 24,
+        "nef_directory_entry_observed": true,
+        "nef_bytes_on_virtual_card": 35110512,
+        "nef_content_decoded_or_verified": false
+      }
+    },
+    "night_raw_status": "BLOCKED_NOT_INVOKED_ON_CAMERA",
+    "precapture_extension_status": "NOT_EXECUTED_STOCK_ONLY",
+    "nef_decode_and_retouch": "BLOCKED",
+    "nraw_video_record_playback": "BLOCKED",
+    "camera_tested": false,
+    "flash_approved": false
   },
   "unresolved": [
     "Night RAW camera integration",
