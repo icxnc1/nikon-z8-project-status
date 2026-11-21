@@ -1,6 +1,6 @@
 {
   "schema": "nikon-z8-research-public-status-v1",
-  "source_evidence_updated_utc": "2026-11-21T20:32:23+00:00",
+  "source_evidence_updated_utc": "2026-11-21T20:39:51+00:00",
   "research_only": true,
   "camera_tested_by_lab": false,
   "flash_approved": false,
@@ -89,6 +89,32 @@
       "flash_approved": false
     },
     "decoding_proven": false,
+    "physical_camera_verified": false,
+    "flash_approved": false
+  },
+  "nef_decode": {
+    "schema": "Z8-PUBLIC-NEF-DECODE-v1",
+    "classification": "STOCK_QEMU_SYNTHETIC_SENSOR_LIBRAW",
+    "versions": {
+      "C311": {
+        "raw_samples_compared": 45705600,
+        "source_pixel_mismatches": 0,
+        "guest_producer_pixel_mismatches": 0,
+        "libraw_decoded": true,
+        "nikon_camera_retouch_tested": false
+      },
+      "C312": {
+        "raw_samples_compared": 45705600,
+        "source_pixel_mismatches": 0,
+        "guest_producer_pixel_mismatches": 0,
+        "libraw_decoded": true,
+        "nikon_camera_retouch_tested": false
+      }
+    },
+    "identical_decoded_pixels_c311_c312": true,
+    "decoded_sample_total": 91411200,
+    "independent_decoder": "LibRaw",
+    "second_decoder_accepted": false,
     "physical_camera_verified": false,
     "flash_approved": false
   },
