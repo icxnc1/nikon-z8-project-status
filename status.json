@@ -10,8 +10,8 @@
   "brk_v2_valid": 64,
   "qemu_copy_boundary": {
     "resolution_bytes": 4096,
-    "failing_end": "0x408AA000",
-    "passing_end": "0x408AB000",
+    "adjacent_endpoints_tested": true,
+    "transition": "FAIL_LATE_TO_PASS_MENU",
     "hardware_conclusion": "BLOCKED"
   },
   "independent_checks": {
