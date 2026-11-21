@@ -1,0 +1,28 @@
+<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>Nikon Z8 • Monitor cercetare</title>
+<style>:root{color-scheme:dark;--bg:#0c1421;--panel:#17263a;--line:#32465d;--text:#edf5ff;--sub:#adc1da;--cyan:#7cdbf5;--green:#93e4c2;--yellow:#ffce87}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0,#25415b,transparent 44%),var(--bg);color:var(--text);font:15px/1.6 system-ui,Segoe UI,sans-serif}
+header,main,footer{max-width:1120px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.eyebrow{color:var(--cyan);font-size:12px;text-transform:uppercase;letter-spacing:.14em}h1{font-size:clamp(28px,5vw,45px);line-height:1.2;margin:8px 0 16px}h2{font-size:20px;margin-top:0}
+p,.muted{color:var(--sub)}a{color:var(--cyan)}.flag{border:1px solid #74614e;border-radius:7px;padding:5px 11px;color:var(--yellow)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:24px 0}
+.card,.panel{border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#1c2e44,#111e2f);padding:21px}
+.value{font-size:36px;font-weight:750;line-height:1.2}.panel{margin:18px 0}
+table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:10px;border-bottom:1px solid var(--line)}th{color:var(--sub)}.rail{display:flex;gap:9px;flex-wrap:wrap}.rail span{background:#26384f;padding:7px 11px;border-radius:7px}
+footer{color:var(--sub);font-size:13px}.status{color:var(--green)}@media(max-width:600px){td,th{font-size:12px;padding:7px}}</style></head>
+<body><header><strong>NIKON Z8 / OBSERVATOR</strong><span class="eyebrow">Monitor public • QEMU</span></header><main>
+<div class="eyebrow">Dovezi sintetizate, fără cod Nikon</div><h1>Progresul cercetării firmware Z8</h1>
+<p>Monitorizare publică generată din rezultatele verificatorilor locali. Nu publică firmware, imagini binare, cod privat sau jurnale interne.</p>
+<span class="flag">NEINSTALABIL • FLASH INTERZIS</span>
+<div class="grid"><article class="card"><div class="eyebrow">Experimente</div><div class="value">25</div><p>Rulări QEMU cu dovezi verificate</p></article>
+<article class="card"><div class="eyebrow">Porniri reușite</div><div class="value">14</div><p>Limitate la meniu și teste sintetice</p></article>
+<article class="card"><div class="eyebrow">Eșecuri detectate</div><div class="value">11</div><p>Boot sau eșec după boot</p></article>
+<article class="card"><div class="eyebrow">R9 • BRK corect</div><div class="value">64/64</div><p>Instrucțiuni AArch64 valide</p></article></div>
+<section class="panel"><h2>R8 — delimitarea pragului</h2><p>O variație controlată a copiei de memorie în C3.12 a localizat trecerea de la eșec la pornire reușită între două poziții consecutive de 4 KiB. Nu există puncte intermediare netestate pe această grilă.</p><div class="rail"><span>Control negativ: FAIL_LATE</span><span>Control pozitiv: PASS_MENU</span><span>Hardware: neverificat</span></div></section>
+<section class="panel"><h2>Comparații verificabile</h2><table><thead><tr><th>Control</th><th>Rezultat emulator</th></tr></thead><tbody><tr><td>Firmware C3.12 original</td><td>PASS_MENU</td></tr><tr><td>Control negativ la limita memoriei</td><td>FAIL_LATE</td></tr><tr><td>Control pozitiv la limita memoriei</td><td>PASS_MENU</td></tr><tr><td>R9: 64 instrucțiuni BRK valide</td><td>PASS_MENU</td></tr><tr><td>Limită model TLB</td><td>PASS_MENU</td></tr><tr><td>Limită model cache</td><td>PASS_MENU</td></tr></tbody></table></section>
+<section class="panel"><h2>Firmware și limite cunoscute</h2>
+<p><strong>Nikon originale:</strong> C3.00, C3.10, C3.11, C3.12. <strong>Comunitate:</strong> 04.06 derivat din C3.11, cu scenarii hardware raportate de dezvoltator. <strong>04.07:</strong> versiune experimentală verificată aici numai în emulator.</p>
+<p>Corecțiile NEF post-release există în sursele de lucru, dar nu au fost identificate în imaginea publicată 04.06. Testele de captură, N-RAW, redare, procesare NEF și cache/TLB rămân incomplete.</p>
+<p><strong>R9:</strong> noul control BRK a trecut verificările binare și QEMU; două tipare istorice aveau fiecare 62/64 instrucțiuni BRK invalide. Rapoartele istorice au fost păstrate.</p></section>
+<section class="panel"><h2>Ultima actualizare a probelor</h2><p>21.11.2026 16:51 UTC. Datele sunt exportate periodic când calculatorul și WSL funcționează; aceasta nu este o transmisie directă de la cameră.</p><p><a href="https://github.com/XinmiaoZhao/NikonFirmwarePatch">Patch comunitar</a> · <a href="https://downloadcenter.nikonimglib.com/en/products/616/Z_8.html">Nikon oficial</a></p></section>
+</main><footer>Nikon Z8 • cercetare independentă • numai emulator • fără aprobare de flash.</footer></body></html>
