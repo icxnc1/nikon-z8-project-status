@@ -1,12 +1,12 @@
 {
   "schema": "nikon-z8-research-public-status-v1",
-  "source_evidence_updated_utc": "2026-11-21T16:51:10+00:00",
+  "source_evidence_updated_utc": "2026-11-21T19:03:30+00:00",
   "research_only": true,
   "camera_tested_by_lab": false,
   "flash_approved": false,
-  "verified_qemu_experiments": 25,
-  "qemu_menu_pass": 14,
-  "qemu_failed": 11,
+  "verified_qemu_experiments": 31,
+  "qemu_menu_pass": 17,
+  "qemu_failed": 14,
   "brk_v2_valid": 64,
   "qemu_copy_boundary": {
     "resolution_bytes": 4096,
